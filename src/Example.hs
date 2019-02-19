@@ -1,10 +1,10 @@
 import Euler
 
 -- The ODE
-slope x y = x**2 - y**2
+slope x y = exp $ x - y
 
 -- Initial values
-x_0 = 1.2
+x_0 = 1.5
 y_0 = 2
 
 -- Step size
