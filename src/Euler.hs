@@ -16,7 +16,6 @@ computeResult slope a b h = Result { x = (a + h), y = b + ((slope a b) * h) }
 -- The internal recursive function
 eulerR :: (Double -> Double -> Double) -> Double -> Double -> Double -> Int -> Int -> [Result] -> [Result]
 eulerR slope x_0 y_0 h steps stepsRemaining results
-  | stepsRemaining == steps = eulerR slope x_0 y_0 h steps (stepsRemaining - 1) [(computeResult slope x_0 y_0 h)]
   | stepsRemaining == 0 = results
   | otherwise = 
     let curr = last results
